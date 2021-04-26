@@ -69,7 +69,9 @@ while True:
 
         base_tax = 61
 
-        price_with_dry_land = bid_price + dry_land
+        price_with_dry_land = bid_price + dry_land + int(tax_auction(bid_price))
+        print(price_with_dry_land)
+
 
         # Пошлина
         duty = price_with_dry_land * 0.1
