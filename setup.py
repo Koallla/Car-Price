@@ -1,7 +1,7 @@
 from setuptools import setup, find_namespace_packages
 
 setup(name='car_price',
-    version='1.0.1',
+    version='1.1.1',
     description='car cost calculation',
     url='https://github.com/Koallla/goit-python/tree/main/lesson7/clean_folder',
     author='Mihail Zmiiov',
