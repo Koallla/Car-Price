@@ -1,15 +1,15 @@
 class CarPrice:
+    bid_price = None
+    year = None
+    engine = None
 
-    def __init__(self, bid_price, year, engine_value):
+    def __init__(self):
         self.base_tax = 52
         self.sertification = 213
         self.detailing = 150
         self.car_delivery = 200
         self.dry_land = 400
         self.delivery = 3000
-        self.bid_price = int(bid_price)
-        self.year = int(year)
-        self.engine = float(engine_value)
 
     # Сбор аукциона
     def tax_auction(self):
@@ -134,3 +134,12 @@ class CarPrice:
                           self.detailing + self.car_delivery + self.delivery + self.total_custom()
         print(total_car_price)
 
+    def input_data(self):
+        self.bid_price = int(input('Input price: '))
+        self.year = int(input('Input year: '))
+        self.engine = float(input('Input engine value on format 1.0: ').replace(',', '.'))
+        self.get_final_price()
+
+
+car = CarPrice()
+car.input_data()
